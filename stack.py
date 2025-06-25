@@ -8,7 +8,7 @@ class Node:
 
 class Stack:
     """
-        This stack is implemented using a singly linked list.
+        LIFO data structure. This stack is implemented using a singly linked list.
         All operations are O(1) time complexity because they don’t depend on the number of elements in the stack.
         Total Memory Complexity: O(n), where n is the number of elements in the stack.
     """
