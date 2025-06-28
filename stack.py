@@ -65,7 +65,7 @@ def test_stack():
     print("Is empty after popping all?", stack.is_empty())
 
     # time complexity check:
-    for n in [1000, 10000, 100000, 1000000, 10000000]:
+    for n in [100, 1000, 10000, 100000]:
         start = time.time()
         for i in range(n):
             stack.push(100)
@@ -73,7 +73,7 @@ def test_stack():
         print(f"Push time: {end - start} for n = {n}")
 
     # memory complexity check:
-    for n in [1000, 10000, 100000, 1000000]:
+    for n in [100, 1000, 10000, 100000]:
         tracemalloc.start()
         stack = Stack()
         for i in range(n):

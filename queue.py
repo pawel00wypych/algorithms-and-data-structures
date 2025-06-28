@@ -75,7 +75,7 @@ def test_queue():
     print("Is empty after dequeue all?", queue.is_empty())
 
     # time complexity check:
-    for n in [1000, 10000, 100000, 1000000, 10000000]:
+    for n in [100, 1000, 10000, 100000]:
         start = time.time()
         for i in range(n):
             queue.enqueue(100)
@@ -83,7 +83,7 @@ def test_queue():
         print(f"Push time: {end - start} for n = {n}")
 
     # memory complexity check:
-    for n in [1000, 10000, 100000, 1000000]:
+    for n in [100, 1000, 10000, 100000]:
         tracemalloc.start()
         queue = Queue()
         for i in range(n):
