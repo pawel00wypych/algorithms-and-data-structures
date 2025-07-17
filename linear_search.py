@@ -15,16 +15,16 @@ def linear_search(to_find, data = None):
     """
 
     if data is None:
-        raise ValueError("List of elements can't be empty!")
+        raise ValueError("List of elements can't be empty!\n")
     elif to_find is None:
-        raise ValueError("Object to find can't be empty!")
+        raise ValueError("Object to find can't be empty!\n")
 
     for i in range(len(data)):
         if to_find == data[i]:
-            print(f"Element {to_find} has been found at index {i}")
+            print(f"Element {to_find} has been found at index {i}\n")
             return i
 
-    print(f"There is not value {to_find} in list!")
+    print(f"There is not value {to_find} in list!\n")
     return None
 
 def test_linear_search():
@@ -39,9 +39,10 @@ def test_linear_search():
         for i in range(ranges[r]):
             lists[r].append(i)
 
-    for i in range(3):
-        start = time.time()
+    for i in range(len(lists)):
+        start = time.perf_counter()
         linear_search(lists[i][-1],lists[i])
-        end = time.time()
-        print(f"Linear search time: {end - start} for n = {len(lists[i])} elements.")
+        end = time.perf_counter()
+        elapsed_time = end - start
+        print(f"Linear search time: {elapsed_time:.10f} for n = {len(lists[i])} elements.")
 
